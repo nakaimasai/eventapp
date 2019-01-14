@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.2'
 
 gem 'bootstrap-sass'
 
-gem 'bcrypt'
+gem 'bcrypt',         '3.1.11'
 
 gem 'pg', '>= 0.18', '< 2.0'
 
