@@ -1,0 +1,19 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "EventApp", root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nm"><%= link_to "Home",   root_path%></li>
+        <li class="nm"><%= link_to "Help",   help_path%></li>
+        <li class="nm"><%= link_to "新規登録", signup_path%></li>
+        <li class="nm"><%= link_to "Log in", '#' %></li>
+      </ul>
+    </nav>
+    <form class="navbar-form">
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="キーワード">
+      </div>
+      <button type="submit" class="btn btn-info">検索</button>
+    </form>
+  </div>
+</header>
