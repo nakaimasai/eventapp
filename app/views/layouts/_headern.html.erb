@@ -1,19 +1,36 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
+  <div class="container jumbotron-extend">
     <%= link_to "EventApp", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li class="nm"><%= link_to "Home",   root_path%></li>
         <li class="nm"><%= link_to "Help",   help_path%></li>
         <li class="nm"><%= link_to "新規登録", signup_path%></li>
-        <li class="nm"><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
-    <form class="navbar-form">
-      <div class="form-group">
-          <input type="text" class="form-control" placeholder="キーワード">
-      </div>
-      <button type="submit" class="btn btn-info">検索</button>
-    </form>
+          <% if logged_in? %>
+            <li><%= link_to "開催する", '#' %></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", '#' %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Log out", logout_path, method: :delete %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li class="nm"><%= link_to "Log in", login_path %></li>
+          <% end %>
+      <form class="navbar-form">
+        <div class="form-group">
+            <input type="text" class="form-control input-lg" placeholder="キーワード">
+        </div>
+        <button type="submit" class="btn btn-info">検索</button>
+      </form>
+    </ul>
+   </nav>
   </div>
 </header>

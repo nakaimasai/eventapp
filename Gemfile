@@ -5,6 +5,8 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.2'
 
+gem 'jquery-rails'
+
 gem 'bootstrap-sass'
 
 gem 'bcrypt',         '3.1.11'
