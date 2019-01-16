@@ -197,3 +197,18 @@ input {
     color: $state-danger-text;
   }
 }
+
+.checkbox {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  span {
+    top: 20px;
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+#session_remember_me {
+  margin-top: -16px;
+  margin-left: 0;
+}
