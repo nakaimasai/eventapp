@@ -14,7 +14,7 @@
             </a>
             <ul class="dropdown-menu">
               <li class="nm"><%= link_to "Profile", current_user %></li>
-              <li class="nm"><%= link_to "Settings", '#' %></li>
+              <li class="nm"><%= link_to "Settings", edit_user_path(current_user)%></li>
               <li class="divider"></li>
               <li class="nm"><%= link_to "Log out", logout_path, method: :delete %></li>
             </ul>

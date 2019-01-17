@@ -5,6 +5,12 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.2'
 
+gem 'will_paginate'
+
+gem 'bootstrap-will_paginate'
+
+gem 'fake'
+
 gem 'jquery-rails'
 
 gem 'bootstrap-sass'
