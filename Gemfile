@@ -9,7 +9,11 @@ gem 'will_paginate'
 
 gem 'bootstrap-will_paginate'
 
-gem 'fake'
+gem 'faker'
+
+gem 'carrierwave',             '1.2.2'
+
+gem 'mini_magick',             '4.7.0'
 
 gem 'jquery-rails'
 
@@ -32,6 +36,10 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'bootsnap', '>= 1.1.0', require: false
+
+group :production do
+  gem 'fog', '1.42'
+end
 
 group :development, :test do
 
