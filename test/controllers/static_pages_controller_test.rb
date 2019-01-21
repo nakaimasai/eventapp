@@ -24,10 +24,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select "title", "About | EventApp"
   end
-
-  test "should get kaisai" do
-    get kaisai_path
-    assert_response :success
-    assert_select "title", "kaisai | EventApp"
-  end
 end

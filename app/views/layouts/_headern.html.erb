@@ -1,5 +1,5 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container jumbotron-extend">
+  <div class="container">
     <%= link_to "EventApp", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
@@ -25,12 +25,6 @@
             <li class="nm"><%= link_to "新規登録", signup_path%></li>
             <li class="nm"><%= link_to "Log in", login_path %></li>
           <% end %>
-      <form class="navbar-form">
-        <div class="form-group">
-            <input type="text" class="form-control input-lg" placeholder="キーワード">
-        </div>
-        <button type="submit" class="btn btn-info">検索</button>
-      </form>
     </ul>
    </nav>
   </div>
