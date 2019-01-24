@@ -1,0 +1,7 @@
+<%= render 'layouts/headern' %>
+<h1>詳細</h1>
+<% if @content.present? %>
+<% @content.each do |content| %>
+  <%= render @content %>
+<% end %>
+<% end %>

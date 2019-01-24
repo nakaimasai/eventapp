@@ -1,0 +1,10 @@
+<%= render 'layouts/headern' %>
+<h1>詳細</h1>
+<% if @micropost.present? %>
+<% @micropost.each do |micropost| %>
+<ol class="microposts">
+  <%= render @micropost %>
+</ol>
+<%= will_paginate @micropost %>
+<% end %>
+<% end %>

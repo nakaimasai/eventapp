@@ -1,0 +1,18 @@
+<%= render 'layouts/headern'%>
+<%= form_with model: @micropost do |form| %>
+  <div class="field">
+    <%= form.label :イベントの種類 %>
+    <%= form.select :syurui, [["楽しいやつ", "楽しいやつ"],["大会", "大会"], ["コンテスト", "コンテスト"], ["その他", "その他"]], class:"form-control" %>
+
+    <%= form.label :イベントの名前 %>
+    <%= form.text_field :name, class: 'form-control'%>
+
+    <%= form.label :日時、場所 %>
+    <%= form.text_area :nitizi, class: 'form-control'%>
+
+    <%= form.label :イベントの内容、面白みなど%>
+    <%= form.text_area :naiyou, class: 'form-control' %>
+
+    <%= f.submit "開催する", class: "btn btn-primary" %>
+  </div>
+<% end %>
