@@ -3,8 +3,7 @@ class MicropostsController < ApplicationController
   before_action :correct_user,   only: :destroy
 
   def home
-    @title = Micropost.all
-    @post = Micropost.all
+    @microposts = Micropost.all.paginate(page: params[:page])
   end
 
   def show
