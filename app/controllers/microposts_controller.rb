@@ -4,10 +4,14 @@ class MicropostsController < ApplicationController
 
   def home
     @microposts = Micropost.all.paginate(page: params[:page])
+<<<<<<< HEAD
+=======
+    @title = Micropost.all
+    @content = Micropost.all
+>>>>>>> sanka
   end
 
   def show
-    @micropost = current_user.microposts.paginate(page: params[:page])
   end
 
   def create

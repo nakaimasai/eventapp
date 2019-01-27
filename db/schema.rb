@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_22_110232) do
+ActiveRecord::Schema.define(version: 2019_01_26_121022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2019_01_22_110232) do
     t.datetime "updated_at", null: false
     t.string "picture"
     t.string "title"
+    t.integer "likes_count", default: 0, null: false
+    t.integer "sankas_count", default: 0, null: false
     t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
     t.index ["user_id"], name: "index_microposts_on_user_id"
   end
@@ -34,6 +36,16 @@ ActiveRecord::Schema.define(version: 2019_01_22_110232) do
     t.index ["followed_id"], name: "index_relationships_on_followed_id"
     t.index ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
     t.index ["follower_id"], name: "index_relationships_on_follower_id"
+  end
+
+  create_table "sankas", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "micropost_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["micropost_id"], name: "index_sankas_on_micropost_id"
+    t.index ["user_id", "micropost_id"], name: "index_sankas_on_user_id_and_micropost_id", unique: true
+    t.index ["user_id"], name: "index_sankas_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
