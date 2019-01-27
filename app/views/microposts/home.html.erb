@@ -1,14 +1,8 @@
 <%= render 'layouts/headern'%>
 <h1>イベント一覧</h1>
 <div class="panel panel-default">
-  <div class="panel-body">
-    <div class="col-lg-4">
-      <div class="card" style="width: 18rem;">
-        <h4 class="microposts-1">
-        <%= render @microposts %>
-        <%= will_paginate @microposts %>
-        </h4>
-      </div>
-    </div>
-  </div>
+  <h4 class="microposts-1">
+    <%= render @microposts %>
+    <%= will_paginate @microposts %>
+  </h4>
 </div>

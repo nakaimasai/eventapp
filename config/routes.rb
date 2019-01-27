@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sanka/create'
+  get 'sanka/destroy'
   root   'microposts#home'
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
@@ -20,4 +22,5 @@ Rails.application.routes.draw do
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts
   resources :relationships,       only: [:create, :destroy]
+  resources :sankas, only: [:create, :destroy]
 end

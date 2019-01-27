@@ -6,6 +6,20 @@ class Micropost < ApplicationRecord
   validates :title, presence: true, length: { maximum: 100 }
   validates :content, presence: true, length: { maximum: 500 }
   validate  :picture_size
+  has_many :sankas, dependent: :destroy
+  has_many :sanka_users, through: :sankas, source: :user
+
+  def sanka(user)
+    sankas.create(user_id: user.id)
+  end
+
+  def unsanka(user)
+    sanka.find_by(user_id: user.id).destroy
+  end
+
+  def sanka?(user)
+    sanka_users.include?(user)
+  end
 
   private
 

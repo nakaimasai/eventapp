@@ -1,0 +1,14 @@
+<% if !current_user?(micropost.user) %>
+    <span class="sanka">
+    <% if micropost.sanka?(current_user) %>
+      <%= form_for(micropost.sankas.find_by(user_id: current_user.id), method: :delete, remote: true) do |f| %>
+        <%= f.submit "参加", class: "btn btn-primary"%>
+      <% end %>
+    <% else %>
+      <%= form_for(micropost.sankas.build, remote: true) do |f| %>
+        <div><%= hidden_field_tag :micropost_id, micropost.id %></div>
+        <%= f.submit "参加", class: "btn btn-primary"%>
+      <% end %>
+    <% end %>
+  </span>
+<% end %>
