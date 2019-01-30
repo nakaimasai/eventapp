@@ -5,6 +5,10 @@
     <%= micropost.title %>
     <%= micropost.content %>
     <%= image_tag micropost.picture.url if micropost.picture? %>
+    <a href="//twitter.com/share" class="twitter-share-button" data-text="<シェアしました>" data-url="<EventApp>" data-lang="ja<EventApp>">
+    Tweet
+ </a>
+   <%= link_to "詳細", micropost, method: :get %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
@@ -13,5 +17,4 @@
                                        data: { confirm: "本当に良いですか？" } %>
     <% end %>
   </span>
-  <%= render "sankas/sanka", micropost: micropost %>
 </li>

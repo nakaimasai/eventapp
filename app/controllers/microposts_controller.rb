@@ -4,11 +4,10 @@ class MicropostsController < ApplicationController
 
   def home
     @microposts = Micropost.all.paginate(page: params[:page])
-    @title = Micropost.all
-    @content = Micropost.all
   end
 
   def show
+    @microposts = Micropost.find_by(id:params[:id])
   end
 
   def create

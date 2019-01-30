@@ -3,13 +3,7 @@
 <ul>
   <ol class="microposts">
     <%= render @microposts %>
+    <%= link_to "詳細", show_path %>
   </ol>
-   <%= will_paginate @microposts %>
+  <%= will_paginate @microposts %>
 </ul>
-=======
-<div class="panel panel-default">
-  <h4 class="microposts-1">
-    <%= render @microposts %>
-    <%= will_paginate @microposts %>
-  </h4>
-</div>
