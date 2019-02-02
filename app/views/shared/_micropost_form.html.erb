@@ -1,8 +1,12 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <%= f.text_area :title, placeholder: "タイトル" %>
-    <%= f.text_area :content, placeholder: "詳細(面白いところ.特徴など)" %>
+    <div class="micropostsize">
+    <%= f.text_area :title, placeholder: "タイトル50字以内(思いつけば面白いタイトル)" %>
+    </div>
+    <div class="micropostsize">
+    <%= f.text_area :content, placeholder: "詳細500字以内(日時.開催場所.料金.面白いところ.特徴など)" %>
+    </div>
     <span class="picture">
     <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
   </span>

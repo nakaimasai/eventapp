@@ -1,14 +1,17 @@
 <li id="micropost-<%= micropost.id %>">
+  <div class="well">
   <%= link_to gravatar_for(micropost.user, size: 50), micropost.user %>
   <span class="user"><%= link_to micropost.user.name, micropost.user %></span>
   <span class="content">
+    <h5>イベントタイトル</h5>
     <%= micropost.title %>
-    <%= micropost.content %>
+    <h5>詳細</h5>
+    <%= micropost.content.truncate(100) %>
     <%= image_tag micropost.picture.url if micropost.picture? %>
+    <%= link_to "詳細", micropost, method: :get %>
     <a href="//twitter.com/share" class="twitter-share-button" data-text="<シェアしました>" data-url="<EventApp>" data-lang="ja<EventApp>">
     Tweet
  </a>
-   <%= link_to "詳細", micropost, method: :get %>
   </span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(micropost.created_at) %> ago.
@@ -17,4 +20,5 @@
                                        data: { confirm: "本当に良いですか？" } %>
     <% end %>
   </span>
+</div>
 </li>

@@ -54,10 +54,14 @@ p {
   line-height: 1.7em;
 }
 
+#header {
+  margin-top: -70px;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 3.7em;
+  font-size: 70px;
   color: #FF6600;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -264,6 +268,7 @@ input {
 .microposts {
   list-style: none;
   padding: 0;
+  font-size: 20px;
   li {
     padding: 10px 0;
     border-top: 1px solid #e8e8e8;
@@ -335,4 +340,21 @@ span.picture {
     margin-right: 10px;
     margin-top: 5px;
   }
+}
+
+.micropostsize {
+  font-size: 20px;
+}
+
+.event {
+  font-size: 70px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-nav {
+    float: none;
+    width: 400px;
 }
