@@ -10,7 +10,7 @@ $gray-medium-light: #eaeaea;
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 section{
@@ -54,6 +54,10 @@ p {
   line-height: 1.7em;
 }
 
+a {
+  color: #00BFFF;
+}
+
 #header {
   margin-top: -70px;
 }
@@ -72,6 +76,10 @@ p {
 #logo:hover {
   color: #00FFFF;
   text-decoration: none;
+}
+
+.taka {
+  margin-top: -500px;
 }
 
 input {
@@ -115,10 +123,12 @@ footer ul li {
   font-size: 20px;
 }
 
-.jumbotron-extend {
+.jumbotron {
   height: 80vh;
-  background-image: url(color-2261009.jpg);
+  min-height: 300px;
+  background-image: url("winding-road-1556177_1920.jpg");
   background-size: cover;
+  background-position: center 60%;
 }
 
 .form-group {
